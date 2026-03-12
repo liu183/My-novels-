@@ -1,0 +1,23 @@
+# OpenClaw workspace files
+.openclaw/
+
+# Private memory and session files
+memory/
+IDENTITY.md
+USER.md
+SOUL.md
+MEMORY.md
+TOOLS.md
+HEARTBEAT.md
+AGENTS.md
+
+# Temporary scripts
+scripts/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
