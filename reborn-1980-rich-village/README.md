@@ -20,17 +20,17 @@
 - ✅ Step 6: 逐场景大纲（29场景）
 - ✅ Step 7: 关键场面（7个）
 - ✅ Step 8: 对白与潜台词（3个场面）
-- ⏸️ Step 9-12: 待开始...
+- ✅ Step 9: 象征与暗线布置（5个母题）
+- ⏸️ Step 10-12: 待开始...
 
 ## 文件结构
 
 ```
 reborn-1980-rich-village/
 ├── README.md              # 项目总览
+├── GITLOG.md              # Git提交记录
 ├── step1-ideation/        # 创意生成
-│   ├── concept1.md        # 创意1：年代重生+全家致富
-│   ├── concept2.md        # 创意2：都市复仇
-│   └── concept3.md        # 创意3：都市脑洞
+│   └── concepts.md        # 3个创意，选择创意1
 ├── step2-synopsis/        # 一页提要（锚点）
 │   └── synopsis.md        # 800字锚点提要
 ├── step3-characters/      # 角色设计
@@ -43,34 +43,49 @@ reborn-1980-rich-village/
 │   └── scenes.md          # 29个场景列表
 ├── step7-setpieces/       # 关键场面
 │   └── keyscenes.md       # 7个关键场面设计
-└── step8-dialogue/        # 对白设计
-    └── dialogue.md        # 待生成
+├── step8-dialogue/        # 对白设计
+│   └── dialogue.md        # 3个场面对白脚本
+└── step9-symbolism/       # 象征与暗线
+    └── symbolism.md       # 5个母题，3条副线
 ```
 
 ## 创作状态
 
 ### 已完成
 
-| 步骤 | 状态 | 备注 |
+| 步骤 | 内容 | 状态 |
 |------|------|------|
-| Step 1 | ✅ 完成 | 3个创意，选择创意1 |
-| Step 2 | ✅ 锚点 | 800字锚点提要，已锁定 |
-| Step 3 | ✅ 完成 | 8个核心角色，关系网完整 |
-| Step 4 | ✅ 完成 | 主题+反题+5个母题 |
-| Step 5 | ✅ 完成 | 15节拍结构 |
-| Step 6 | ✅ 完成 | 29个场景大纲 |
-| Step 7 | ✅ 完成 | 7个关键场面 |
+| Step 1 | 创意生成（3个创意） | ✅ 完成 |
+| Step 2 | 一页提要（800字锚点） | ✅ 完成并锁定 |
+| Step 3 | 角色设计（8个核心角色） | ✅ 完成 |
+| Step 4 | 主题确立（主题+反题） | ✅ 完成 |
+| Step 5 | 结构节拍（15节拍结构） | ✅ 完成 |
+| Step 6 | 场景大纲（29个场景） | ✅ 完成 |
+| Step 7 | 关键场面（7个关键场面） | ✅ 完成 |
+| Step 8 | 对白与潜台词（3个场面） | ✅ 完成 |
+| Step 9 | 象征与暗线布置（5个母题） | ✅ 完成 |
 
 ### 待开始
 
 | 步骤 | 状态 |
 |------|------|
-| Step 9 | ⏸️ 待开始 |
 | Step 10 | ⏸️ 待开始 |
 | Step 11 | ⏸️ 待开始 |
 | Step 12 | ⏸️ 待开始 |
 
 ---
 
+## 代码仓提交
+
+- **远程仓库：** https://github.com/liu183/My-novels-.git
+- **分支：** feature/reborn-1980-rich-village
+- **提交记录：**
+  - c1ffedb: Step 1-7（8个文件，921行代码）
+  - 63af462: Step 8 对白（3个文件，+385行）
+  - 最新: Step 9 象征（待提交）
+
+---
+
 **创建时间：** 2026-03-12
-**创建者：** 小密（ Novel Writing Framework ）
+**创建者：** 小密（Novel Writing Framework）
+**项目进度：** 75%（9/12步骤完成）
