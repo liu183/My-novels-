@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/openclaw/openclaw/main/config.schema.json",
+  "acp": {
+    "enabled": false
+  },
+  "models": {
+    "providers": {
+      "nvidia": {
+        "baseUrl": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "YOUR_NVIDIA_API_KEY_HERE",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "z-ai/glm4.7",
+            "name": "GLM 4.7",
+            "contextWindow": 128000,
+            "maxTokens": 16384,
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "api": "openai-completions"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "nvidia/z-ai/glm4.7",
+      "workspace": "/home/z/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "sandbox": {
+        "mode": "off"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "appId": "YOUR_FEISHU_APP_ID_HERE",
+      "appSecret": "YOUR_FEISHU_APP_SECRET_HERE",
+      "enabled": true,
+      "dmPolicy": "open",
+      "allowFrom": ["*"],
+      "encryptStorage": false
+    }
+  },
+  "gateway": {
+    "port": 19002,
+    "mode": "local",
+    "bind": "127.0.0.1",
+    "auth": {
+      "mode": "token",
+      "token": "CHANGE_THIS_TO_SECURE_TOKEN_GENERATED_WITH_OPENSSL_RAND_HEX_32"
+    },
+    "trustedProxies": []
+  },
+  "plugins": {
+    "allow": [
+      "feishu"
+    ],
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.3.11",
+    "lastTouchedAt": "2026-03-12T00:00:00.000Z",
+    "telemetry": false
+  }
+}
