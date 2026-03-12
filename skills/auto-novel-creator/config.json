@@ -1,0 +1,88 @@
+{
+  "default_word_count": 50000,
+  "auto_commit": true,
+  "branch_prefix": "auto-novel-",
+  "backup_enabled": true,
+  "max_retries": 3,
+  "workspace": "/home/z/.openclaw/workspace",
+  "output_base": "/home/z/.openclaw/workspace/novels",
+  "repo_remote": "https://github.com/liu183/My-novels-.git",
+  "steps": {
+    "step1": {
+      "concept_count": 3,
+      "concept_length": 200,
+      "requires_confirm": true
+    },
+    "step2": {
+      "synopsis_min": 600,
+      "synopsis_max": 1000,
+      "requires_confirm": true,
+      "is_anchor": true
+    },
+    "step3": {
+      "character_count": 10,
+      "card_length": 180,
+      "requires_confirm": false
+    },
+    "step4": {
+      "motif_count": 5,
+      "requires_confirm": false
+    },
+    "step5": {
+      "beat_template": "15-beat",
+      "requires_confirm": false
+    },
+    "step6": {
+      "scenes_per_10k_words": 12,
+      "requires_confirm": false
+    },
+    "step7": {
+      "keyscene_ratio": 0.15,
+      "requires_confirm": false
+    },
+    "step8": {
+      "dialogue_scene_count": 6,
+      "dialogue_word_range": [250, 350],
+      "requires_confirm": false
+    },
+    "step9": {
+      "motif_repeat_count": 3,
+      "subplot_count": 3,
+      "requires_confirm": false
+    },
+    "step10": {
+      "tension_peaks_per_act": 3,
+      "requires_confirm": false
+    },
+    "step11": {
+      "ending_options": 3,
+      "requires_confirm": true
+    },
+    "step12": {
+      "scene_word_range": [200, 600],
+      "requires_confirm": false
+    }
+  },
+  "quality_check": {
+    "enabled": true,
+    "check_after_step": [2, 6, 12],
+    "validation_rules": {
+      "step2": [
+        "logline_length",
+        "synopsis_word_count",
+        "causality_check",
+        "theme_statement"
+      ],
+      "step6": [
+        "scene_count",
+        "scene_goals",
+        "conflict_present"
+      ],
+      "step12": [
+        "word_count_target",
+        "scene_completeness",
+        "dialogue_ratio"
+      ]
+    }
+  }
+}
