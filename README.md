@@ -1,38 +1,58 @@
-# Fiction Studio
+# Fiction Studio - 小说创作工作空间
 
-小说创作工作空间，包含结构化写作框架和辅助工具。
+> 结构化小说创作工作空间，包含12步写作框架、多项目管理技能和实战小说项目。
 
-## 项目结构
+---
+
+## 📁 项目结构
 
 ```
-fiction-studio/
-├── README.md                           # 项目说明
-├── skills/                             # 写作技能框架
+My-novels-/
+├── README.md                           # 仓库总览（本文件）
+├── skills/                             # 共享技能框架
 │   ├── novel-writing-framework/        # 12步互动式AI写作框架
-│   │   ├── SKILL.md                    # 核心指引
-│   │   ├── references/                 # 详细参考文档
-│   │   │   ├── step1-ideation.md       # 创意生成
-│   │   │   ├── step2-synopsis.md       # 一页提要（锚点）
-│   │   │   ├── step3-characters.md     # 角色设计
-│   │   │   ├── step4-theme.md          # 主题开发
-│   │   │   ├── step5-structure.md      # 结构节拍
-│   │   │   ├── step6-scenes.md         # 场景大纲
-│   │   │   ├── step7-setpieces.md      # 关键场面
-│   │   │   ├── step8-dialogue.md       # 对白与潜台词
-│   │   │   ├── step9-symbolism.md      # 象征与暗线
-│   │   │   ├── step10-pacing.md        # 节奏与张力
-│   │   │   ├── step11-endings.md       # 结局设计
-│   │   │   └── step12-rewrite.md       # 重写迭代
-│   └── dist/                           # 技能包文件
-│       └── novel-writing-framework.skill
-└── .gitignore
+│   ├── auto-novel-creator/             # 全自动小说创作引擎
+│   ├── apocalypse-writing/             # 末世文创作专项指南
+│   ├── ip-adaptation-guide/            # IP改编专项指南
+│   ├── male-web-novel/                 # 男频网文创作指南 ⭐
+│   └── README.md                       # 技能目录索引
+├── projects/                           # 小说项目目录
+│   ├── reborn-1980-rich-village/       # 《重生八〇，断亲后我领全镇致富》
+│   │   ├── step1-ideation/             # Step 1: 创意生成
+│   │   ├── step2-synopsis/             # Step 2: 一页提要（锚点）
+│   │   ├── step3-characters/           # Step 3: 角色设计
+│   │   ├── step4-theme/                # Step 4: 主题确立
+│   │   ├── step5-structure/            # Step 5: 结构节拍
+│   │   ├── step6-scenes/               # Step 6: 场景大纲
+│   │   ├── step7-setpieces/            # Step 7: 关键场面
+│   │   ├── step8-dialogue/             # Step 8: 对白与潜台词
+│   │   ├── step9-symbolism/            # Step 9: 象征与暗线
+│   │   ├── step10-pacing/              # Step 10: 节奏与张力
+│   │   ├── step11-endings/             # Step 11: 结局与余韵
+│   │   ├── step12-rewrite/             # Step 12: 重写与迭代
+│   │   └── novel/                      # 小说正文
+│   │       ├── chapter01.md
+│   │       ├── chapter02.md
+│   │       └── ...
+│   ├── [新小说项目]/
+│   └── ...
+├── templates/                          # 项目模板库
+│   └── novel-template/                 # 新小说启动模板
+│       ├── README.md
+│       ├── step1/
+│       ├── step2/
+│       ├── ...
+│       └── novel/
+└── DEPLOYMENT.md                       # OpenClaw 部署配置（可选）
 ```
 
-## 核心功能：Novel Writing Framework
+---
 
-### 概述
+## 🎯 核心功能
 
-12步互动式AI写作框架，从创意生成到重写迭代的全流程支持。
+### Novel Writing Framework - 12步写作框架
+
+从创意生成到重写迭代的全流程支持：
 
 **输出流程：**
 ```
@@ -42,115 +62,197 @@ fiction-studio/
 ```
 
 **设计特点：**
-
 - **锚点机制**：Step 2（一页提要）是项目锚点，任何变更需先更新此步
 - **模块化**：每个步骤可独立执行，支持并行处理
 - **渐进式**：从200字创意到精细场景，信息密度逐步递增
-- **适配性强**：适合小说、剧本、网文等多种格式
 
-**适用场景：**
-
-- 传统小说创作
-- 网络小说连载
-- 剧本创作（电影/剧集）
-- 协作写作团队
-- 快速原型和多结局探索
-
-### 快速开始
-
-1. 阅读 `skills/novel-writing-framework/SKILL.md` 了解框架设计
-2. 参考 `skills/novel-writing-framework/references/` 下的详细步骤文档
-3. 从 **Step 1: 创意生成** 开始，依次执行各步骤
-
-### 步骤总览
-
-| 步骤 | 阶段 | 核心输出 |
-|------|------|----------|
-| 1 | 创意 | 3-6×200字故事概念 |
-| 2 | 提要 | ≤1000字锚点摘要 |
-| 3 | 角色 | 角色卡和关系网 |
-| 4 | 主题 | 主题和论证路径 |
-| 5 | 结构 | 节拍表（3幕/15拍/8序列） |
-| 6 | 场景 | 逐场景大纲 |
-| 7 | 场面 | 关键场面设计 |
-| 8 | 对白 | 对白脚本和潜台词 |
-| 9 | 象征 | 母题和暗线布置 |
-| 10 | 节奏 | 张力曲线和转场 |
-| 11 | 结局 | 多方案结局设计 |
-| 12 | 重写 | 迭代改进计划 |
-
-## 使用指南
-
-### 基础流程
-
-1. **Step 1: 创意生成**
-   - 输入：类型偏好、关键词、禁忌元素
-   - 输出：多条故事概念供选择
-
-2. **Step 2: 提要锚定** ⚠️ **关键步骤**
-   - 选定一个创意
-   - 扩展为一页式完整摘要
-   - **此摘要将作为全文锚点**
-
-3. **Step 3-5: 设计阶段**
-   - Step 3: 细化角色动机、软肋、弧光
-   - Step 4: 明确主题和反题
-   - Step 5: 规划结构节拍
-
-4. **Step 6-8: 细化阶段**
-   - Step 6: 逐场景目标、冲突、转折
-   - Step 7: 设计关键场面
-   - Step 8: 编写对白和潜台词
-
-5. **Step 9-11: 精炼阶段**
-   - Step 9: 布置象征和暗线
-   - Step 10: 设计节奏和张力
-   - Step 11: 设计结局方案
-
-6. **Step 12: 迭代**
-   - 根据反馈制定重写计划
-   - 从宏观到微观逐步改进
-
-### 关键原则
-
-**锚点原则：** Step 2 一旦确立，任何结构变更必须先更新此步
-
-**模块化：** 每步产出可独立使用，便于版本管理
-
-**渐进性：** 信息密度和精细度逐步增加
-
-**闭环性：** 每个开放问题都需要在后续步骤回收或明确说明保留未解决
-
-## 安装使用
-
-### 作为OpenClaw Skill
-
-1. 将 `novel-writing-framework.skill` 复制到你的 OpenClaw skills 目录
-2. 重启 OpenClaw 以加载技能
-3. 开始使用12步写作框架
-
-### 作为参考文档
-
-直接阅读源码目录下的参考文档：
-- `skills/novel-writing-framework/references/step*.md`
-
-每个文件都包含详细的执行指导和参数说明。
-
-## 网文适配建议
-
-针对网络小说创作，建议调整：
-
-- **场景密度**：网文远比电影密集，建议场景数 100+
-- **章节规划**：将场景组合成章，每章3-5个场景
-- **节奏控制**：利用读者自主阅读特点，设计悬念挂点
-- **伏笔回收**：长篇连载需更系统的暗线管理
-
-## 贡献和反馈
-
-欢迎提出改进建议和使用反馈。
+详见：`skills/novel-writing-framework/`
 
 ---
 
-**版本**: v1.0
-**作者**: Fiction Studio
-**许可**: MIT License
+## 📚 技能框架
+
+### 1. novel-writing-framework (12步写作框架)
+12步互动式AI写作框架，支持从创意生成到最终重写的全流程。
+
+### 2. auto-novel-creator (全自动小说创作引擎)
+全自动12步小说创作引擎，一键生成完整小说。
+
+### 3. apocalypse-writing (末世文创作专项指南)
+末世文创作专项指南，专注于末世题材的创作技巧。
+
+### 4. ip-adaptation-guide (IP改编专项指南)
+IP改编专项指南，专注于将现有作品改编剧本/短剧。
+
+### 5. male-web-novel (男频网文创作指南) ⭐ NEW
+男频网文创作指南，包含都市脑洞、玄幻脑洞、悬疑脑洞、科幻题材的完整创作框架。
+
+详见：`skills/README.md`
+
+---
+
+## 🏗️ 项目管理策略
+
+### 分支策略
+
+| 分支类型 | 命名规则 | 用途 | 生命周期 |
+|---------|---------|------|---------|
+| **项目主干** | `main/{project-name}` | 某个小说的稳定版本 | 永久 |
+| **feature分支** | `feature/{project-name}-{action}` | 新项目初始化、功能开发 | 临时 |
+| **refactor分支** | `refactor/{project-name}-v{X}` | 版本重写和大优化 | 临时 |
+| **技能分支** | `skills/{skill-name}` | 技能框架开发和更新 | 临时 |
+
+### 工作流程
+
+#### 创建新小说
+```bash
+# 1. 复制模板
+cp -r templates/novel-template projects/[新项目名]
+
+# 2. 创建 feature 分支
+git checkout -b feature/[新项目名]-init
+
+# 3. 写作并提交
+git add projects/[新项目名]/
+git commit -m "Init [项目名] - Step 1-7"
+git push origin feature/[新项目名]-init
+```
+
+#### 版本优化
+```bash
+# 1. 创建 refactor 分支
+git checkout -b refactor/[项目名]-v[版本号]
+
+# 2. 在项目下创建 versions/v[X] 目录
+mkdir -p projects/[项目名]/versions/v[X]
+
+# 3. 基于新版本目录工作，提交
+git add projects/[项目名]/versions/v[X]/
+git commit -m "Refactor [项目名] v[X] - [描述]"
+git push origin refactor/[项目名]-v[X]
+```
+
+#### 合并优化
+```bash
+# 1. 切换到项目主干
+git checkout main/[项目名]
+
+# 2. 合并 refactor 结果
+git merge refactor/[项目名]-v[X]
+
+# 3. 替换主目录为新版本
+cp -r projects/[项目名]/versions/v[X]/* projects/[项目名]/
+
+# 4. 提交并推送
+git add -u
+git commit -m "Merge v[X] into main"
+git push origin main/[项目名]
+```
+
+---
+
+## 📖 项目列表
+
+### 《重生八〇，断亲后我领全镇致富》
+- **状态**: ✅ 完成（12章，118,000字）
+- **类型**: 男频短剧 × 年代重生 × 断亲爽文
+- **分支**: `feature/reborn-1980-rich-village`
+- **目录**: `projects/reborn-1980-rich-village/`
+
+详见：`projects/reborn-1980-rich-village/README.md`
+
+### 新小说项目
+*待创建*
+
+---
+
+## 🚀 快速开始
+
+### 使用模板创建新小说
+
+```bash
+# 1. 复制模板
+cp -r templates/novel-template projects/[新项目名]
+
+# 2. 编辑 project/[新项目名]/README.md
+#    更新小说标题、作者、类型等信息
+
+# 3. 开始创作：从 step1 创意生成开始
+```
+
+### 使用技能框架
+
+1. **12步写作框架**：
+   - 阅读 `skills/novel-writing-framework/SKILL.md`
+   - 从 `step1-ideation.md` 开始执行
+
+2. **男频网文指南**：
+   - 阅读 `skills/male-web-novel/SKILL.md`
+   - 参考都市、玄幻、悬疑、科幻各类型模板
+
+3. **全自动创作**：
+   - 使用 `skills/auto-novel-creator` 一键生成完整小说
+
+---
+
+## 📊 统计数据
+
+- **技能数量**: 5 个框架
+- **已完成小说**: 1 部
+- **总字数**: ~118,000 字
+- **步骤框架**: 12步写作框架完整版
+- **分支数量**: 6+ 个功能分支
+
+---
+
+## 🤝 贡献指南
+
+### 提交规范
+
+```
+[项目]-[操作]: [描述]
+例如：
+- reborn-1980-init: Step 1-7 完成
+- reborn-1980-ch01: 第1章创作完成
+- reborn-1980-v2-refactor: 场景压缩优化
+- skills-add: 新增男频网文指南
+```
+
+### 项目结构规范
+
+每个小说项目必须包含：
+- ✅ README.md（项目信息）
+- ✅ step1-12/ 目录（12步框架输出）
+- ✅ novel/ 目录（小说正文）
+
+---
+
+## 📝 网文创作提示
+
+- **场景密度**：网文（25-35场）vs 电影（40-60场）
+- **章节规划**：每章3-5个场景，每章3000-5000字
+- **悬念挂点**：每章结尾设置钩子
+- **暗线管理**：长篇需系统管理伏笔回收
+
+---
+
+## ⚙️ 部署配置（可选）
+
+仓库包含 OpenClaw 部署配置文件：
+- `DEPLOYMENT.md` - 部署文档
+- `openclaw-deploy.sh` - 部署脚本
+- `openclaw.env.template` - 环境变量模板
+
+详见：`DEPLOYMENT.md`
+
+---
+
+## 📄 许可证
+
+MIT License
+
+---
+
+**版本**: v2.0 (多项目管理结构)
+**最后更新**: 2026-03-13
+**仓库**: https://github.com/liu183/My-novels-.git
